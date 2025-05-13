@@ -1,5 +1,5 @@
 Repository's Location,Branch,File formats,Find Previous Authors,Ignore Glob List,Ignore standalone config,Ignore Commits List,Ignore Authors List,Shallow Cloning,File Size Limit,Ignore File Size Limit,Skip Ignored File Analysis
 https://github.com/Jairik/Chick-Counting.git,main,,,,,,,,0,yes,
-https://github.com/Jairik/Chick-Counting.git,pi-dev,,,,,,,,0,yes,
+https://github.com/Jairik/Chick-Counting.git,pi-lfs,,,,,,,,0,yes,
 https://github.com/Jairik/Chick-Counting.git,pi,,,,,,,,0,yes,
-
+https://github.com/Jairik/Chick-Counting.git,pi-dev,,,,,,,,0,yes,
