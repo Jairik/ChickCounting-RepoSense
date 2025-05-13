@@ -1,32 +1,32 @@
-May 13, 2025 6:49:07 AM reposense.system.LogsManager addFileHandler
+May 13, 2025 6:55:16 AM reposense.system.LogsManager addFileHandler
 INFO: Log temp folder has been successfully created
-May 13, 2025 6:49:07 AM reposense.parser.ArgsParser parse
+May 13, 2025 6:55:16 AM reposense.parser.ArgsParser parse
 INFO: Config path not provided, using the config folder as default.
-May 13, 2025 6:49:07 AM reposense.parser.ReportConfigYamlParser parse
+May 13, 2025 6:55:16 AM reposense.parser.ReportConfigYamlParser parse
 INFO: Parsing report-config.yaml file...
-May 13, 2025 6:49:07 AM reposense.parser.ArgsParser addReportConfigToBuilder
+May 13, 2025 6:55:16 AM reposense.parser.ArgsParser addReportConfigToBuilder
 WARNING: Error parsing report-config.yaml: /home/runner/work/ChickCounting-RepoSense/ChickCounting-RepoSense/config/report-config.yaml (No such file or directory)
 /home/runner/work/ChickCounting-RepoSense/ChickCounting-RepoSense/config/report-config.yaml Ignoring the report config provided.
-May 13, 2025 6:49:07 AM reposense.parser.CsvParser validateHeader
+May 13, 2025 6:55:16 AM reposense.parser.CsvParser validateHeader
 INFO: Parsed header of CSV file, repo-config.csv, and recognized columns: Ignore Standalone Config,  Repository's Location,  Skip Ignored File Analysis,  Branch,  Shallow Cloning,  File formats,  Ignore Glob List,  Ignore Authors List,  Find Previous Authors,  File Size Limit,  Ignore File Size Limit,  Ignore Commits List
-May 13, 2025 6:49:07 AM reposense.parser.RepoConfigCsvParser processLine
+May 13, 2025 6:55:16 AM reposense.parser.RepoConfigCsvParser processLine
 WARNING: Ignoring file size limit column since file size limit is ignored
-May 13, 2025 6:49:07 AM reposense.parser.RepoConfigCsvParser processLine
+May 13, 2025 6:55:16 AM reposense.parser.RepoConfigCsvParser processLine
 WARNING: Ignoring file size limit column since file size limit is ignored
-May 13, 2025 6:49:07 AM reposense.parser.RepoConfigCsvParser processLine
+May 13, 2025 6:55:16 AM reposense.parser.RepoConfigCsvParser processLine
 WARNING: Ignoring file size limit column since file size limit is ignored
-May 13, 2025 6:49:07 AM reposense.parser.RepoConfigCsvParser processLine
+May 13, 2025 6:55:16 AM reposense.parser.RepoConfigCsvParser processLine
 WARNING: Ignoring file size limit column since file size limit is ignored
-May 13, 2025 6:49:07 AM reposense.parser.CsvParser validateHeader
+May 13, 2025 6:55:16 AM reposense.parser.CsvParser validateHeader
 INFO: Parsed header of CSV file, author-config.csv, and recognized columns: Author's Emails,  Repository's Location,  Branch,  Author's Git Host ID,  Author's Display Name,  Ignore Glob List,  Author's Git Author Name
-May 13, 2025 6:49:07 AM reposense.model.ConfigRunConfiguration getRepoConfigurations
+May 13, 2025 6:55:16 AM reposense.model.ConfigRunConfiguration getRepoConfigurations
 WARNING: No valid configurations in the author-config.csv.
 reposense.parser.exceptions.InvalidCsvException: No valid configurations in the author-config.csv.
 	at reposense.parser.CsvParser.parse(CsvParser.java:124)
 	at reposense.model.ConfigRunConfiguration.getRepoConfigurations(ConfigRunConfiguration.java:52)
 	at reposense.RepoSense.main(RepoSense.java:59)
 
-May 13, 2025 6:49:07 AM reposense.git.GitConfig getGlobalGitLfsConfig
+May 13, 2025 6:55:16 AM reposense.git.GitConfig getGlobalGitLfsConfig
 WARNING: Could not get global git lfs config
 java.lang.RuntimeException: reposense.system.CommandRunnerProcessException: Error returned from command git config --global --list on path . :
 fatal: unable to read config file '/home/runner/.gitconfig': No such file or directory
@@ -42,24 +42,24 @@ fatal: unable to read config file '/home/runner/.gitconfig': No such file or dir
 	at reposense.system.CommandRunner.runCommand(CommandRunner.java:21)
 	... 3 more
 
-May 13, 2025 6:49:07 AM reposense.report.RepoCloner spawnCloneProcess
+May 13, 2025 6:55:16 AM reposense.report.RepoCloner spawnCloneProcess
 INFO: Cloning in parallel from https://github.com/Jairik/Chick-Counting.git...
-May 13, 2025 6:49:07 AM reposense.report.RepoCloner waitForCloneProcess
+May 13, 2025 6:55:16 AM reposense.report.RepoCloner waitForCloneProcess
 INFO: Waiting for cloning of https://github.com/Jairik/Chick-Counting.git to complete...
-May 13, 2025 6:49:20 AM reposense.report.RepoCloner waitForCloneProcess
+May 13, 2025 6:55:29 AM reposense.report.RepoCloner waitForCloneProcess
 INFO: Cloning of https://github.com/Jairik/Chick-Counting.git completed!
-May 13, 2025 6:49:20 AM reposense.report.ReportGenerator analyzeRepos
+May 13, 2025 6:55:29 AM reposense.report.ReportGenerator analyzeRepos
 INFO: [1/4] Analyzing https://github.com/Jairik/Chick-Counting.git (main)...
-May 13, 2025 6:49:23 AM reposense.git.GitClone cloneFromBareAndUpdateBranch
+May 13, 2025 6:55:32 AM reposense.git.GitClone cloneFromBareAndUpdateBranch
 SEVERE: Exception met while cloning or checking out Jairik/Chick-Counting[main].Analysis terminated.
 java.lang.RuntimeException: reposense.system.CommandRunnerProcessException: Error returned from command git clone 'repos/Jairik_Chick-Counting/Chick-Counting_bare' --branch main 'repos/Jairik_Chick-Counting/Chick-Counting' on path . :
 Cloning into 'repos/Jairik_Chick-Counting/Chick-Counting'...
 done.
-Updating files:  94% (1348/1428)Updating files:  95% (1357/1428)Updating files:  95% (1359/1428)Updating files:  95% (1362/1428)Updating files:  96% (1371/1428)Updating files:  97% (1386/1428)Updating files:  98% (1400/1428)Updating files:  99% (1414/1428)Updating files: 100% (1428/1428)Updating files: 100% (1428/1428), done.
+Updating files:  94% (1353/1428)Updating files:  95% (1357/1428)Updating files:  95% (1360/1428)Updating files:  96% (1371/1428)Updating files:  96% (1375/1428)Updating files:  97% (1386/1428)Updating files:  98% (1400/1428)Updating files:  99% (1414/1428)Updating files: 100% (1428/1428)Updating files: 100% (1428/1428), done.
 Downloading backend/mock_backend/tennisball/runs/detect/train/F1_curve.png (93 KB)
 Error downloading object: backend/mock_backend/tennisball/runs/detect/train/F1_curve.png (6520784): Smudge error: Error downloading backend/mock_backend/tennisball/runs/detect/train/F1_curve.png (652078408a22f7f5adf192e4f585b49018e51cc8ea07ee003f1865f0e88d0c40): error transferring "652078408a22f7f5adf192e4f585b49018e51cc8ea07ee003f1865f0e88d0c40": [0] remote missing object 652078408a22f7f5adf192e4f585b49018e51cc8ea07ee003f1865f0e88d0c40
 
-Errors logged to '/home/runner/work/ChickCounting-RepoSense/ChickCounting-RepoSense/repos/Jairik_Chick-Counting/Chick-Counting/.git/lfs/logs/20250513T064923.640448976.log'.
+Errors logged to '/home/runner/work/ChickCounting-RepoSense/ChickCounting-RepoSense/repos/Jairik_Chick-Counting/Chick-Counting/.git/lfs/logs/20250513T065532.749062758.log'.
 Use `git lfs logs last` to view the log.
 error: external filter 'git-lfs filter-process' failed
 fatal: backend/mock_backend/tennisball/runs/detect/train/F1_curve.png: smudge filter lfs failed
@@ -80,11 +80,11 @@ and retry with 'git restore --source=HEAD :/'
 Caused by: reposense.system.CommandRunnerProcessException: Error returned from command git clone 'repos/Jairik_Chick-Counting/Chick-Counting_bare' --branch main 'repos/Jairik_Chick-Counting/Chick-Counting' on path . :
 Cloning into 'repos/Jairik_Chick-Counting/Chick-Counting'...
 done.
-Updating files:  94% (1348/1428)Updating files:  95% (1357/1428)Updating files:  95% (1359/1428)Updating files:  95% (1362/1428)Updating files:  96% (1371/1428)Updating files:  97% (1386/1428)Updating files:  98% (1400/1428)Updating files:  99% (1414/1428)Updating files: 100% (1428/1428)Updating files: 100% (1428/1428), done.
+Updating files:  94% (1353/1428)Updating files:  95% (1357/1428)Updating files:  95% (1360/1428)Updating files:  96% (1371/1428)Updating files:  96% (1375/1428)Updating files:  97% (1386/1428)Updating files:  98% (1400/1428)Updating files:  99% (1414/1428)Updating files: 100% (1428/1428)Updating files: 100% (1428/1428), done.
 Downloading backend/mock_backend/tennisball/runs/detect/train/F1_curve.png (93 KB)
 Error downloading object: backend/mock_backend/tennisball/runs/detect/train/F1_curve.png (6520784): Smudge error: Error downloading backend/mock_backend/tennisball/runs/detect/train/F1_curve.png (652078408a22f7f5adf192e4f585b49018e51cc8ea07ee003f1865f0e88d0c40): error transferring "652078408a22f7f5adf192e4f585b49018e51cc8ea07ee003f1865f0e88d0c40": [0] remote missing object 652078408a22f7f5adf192e4f585b49018e51cc8ea07ee003f1865f0e88d0c40
 
-Errors logged to '/home/runner/work/ChickCounting-RepoSense/ChickCounting-RepoSense/repos/Jairik_Chick-Counting/Chick-Counting/.git/lfs/logs/20250513T064923.640448976.log'.
+Errors logged to '/home/runner/work/ChickCounting-RepoSense/ChickCounting-RepoSense/repos/Jairik_Chick-Counting/Chick-Counting/.git/lfs/logs/20250513T065532.749062758.log'.
 Use `git lfs logs last` to view the log.
 error: external filter 'git-lfs filter-process' failed
 fatal: backend/mock_backend/tennisball/runs/detect/train/F1_curve.png: smudge filter lfs failed
@@ -97,9 +97,9 @@ and retry with 'git restore --source=HEAD :/'
 	at reposense.system.CommandRunner.runCommand(CommandRunner.java:21)
 	... 8 more
 
-May 13, 2025 6:49:23 AM reposense.report.ReportGenerator analyzeRepos
+May 13, 2025 6:55:32 AM reposense.report.ReportGenerator analyzeRepos
 INFO: [2/4] Analyzing https://github.com/Jairik/Chick-Counting.git (pi-lfs)...
-May 13, 2025 6:49:24 AM reposense.git.GitClone cloneFromBareAndUpdateBranch
+May 13, 2025 6:55:33 AM reposense.git.GitClone cloneFromBareAndUpdateBranch
 SEVERE: Exception met while cloning or checking out Jairik/Chick-Counting[pi-lfs].Analysis terminated.
 java.lang.RuntimeException: reposense.system.CommandRunnerProcessException: Error returned from command git clone 'repos/Jairik_Chick-Counting/Chick-Counting_bare' --branch pi-lfs 'repos/Jairik_Chick-Counting/Chick-Counting' on path . :
 Cloning into 'repos/Jairik_Chick-Counting/Chick-Counting'...
@@ -107,7 +107,7 @@ done.
 Downloading data/test-no-encode/RGB---20250426-012747-781.m264 (13 MB)
 Error downloading object: data/test-no-encode/RGB---20250426-012747-781.m264 (c56e119): Smudge error: Error downloading data/test-no-encode/RGB---20250426-012747-781.m264 (c56e1193a464ba6e011ed436b39a7ed2b2324c37808074cd72f8f0c2ca93a10e): error transferring "c56e1193a464ba6e011ed436b39a7ed2b2324c37808074cd72f8f0c2ca93a10e": [0] remote missing object c56e1193a464ba6e011ed436b39a7ed2b2324c37808074cd72f8f0c2ca93a10e
 
-Errors logged to '/home/runner/work/ChickCounting-RepoSense/ChickCounting-RepoSense/repos/Jairik_Chick-Counting/Chick-Counting/.git/lfs/logs/20250513T064924.219932819.log'.
+Errors logged to '/home/runner/work/ChickCounting-RepoSense/ChickCounting-RepoSense/repos/Jairik_Chick-Counting/Chick-Counting/.git/lfs/logs/20250513T065533.328248999.log'.
 Use `git lfs logs last` to view the log.
 error: external filter 'git-lfs filter-process' failed
 fatal: data/test-no-encode/RGB---20250426-012747-781.m264: smudge filter lfs failed
@@ -131,7 +131,7 @@ done.
 Downloading data/test-no-encode/RGB---20250426-012747-781.m264 (13 MB)
 Error downloading object: data/test-no-encode/RGB---20250426-012747-781.m264 (c56e119): Smudge error: Error downloading data/test-no-encode/RGB---20250426-012747-781.m264 (c56e1193a464ba6e011ed436b39a7ed2b2324c37808074cd72f8f0c2ca93a10e): error transferring "c56e1193a464ba6e011ed436b39a7ed2b2324c37808074cd72f8f0c2ca93a10e": [0] remote missing object c56e1193a464ba6e011ed436b39a7ed2b2324c37808074cd72f8f0c2ca93a10e
 
-Errors logged to '/home/runner/work/ChickCounting-RepoSense/ChickCounting-RepoSense/repos/Jairik_Chick-Counting/Chick-Counting/.git/lfs/logs/20250513T064924.219932819.log'.
+Errors logged to '/home/runner/work/ChickCounting-RepoSense/ChickCounting-RepoSense/repos/Jairik_Chick-Counting/Chick-Counting/.git/lfs/logs/20250513T065533.328248999.log'.
 Use `git lfs logs last` to view the log.
 error: external filter 'git-lfs filter-process' failed
 fatal: data/test-no-encode/RGB---20250426-012747-781.m264: smudge filter lfs failed
@@ -144,9 +144,9 @@ and retry with 'git restore --source=HEAD :/'
 	at reposense.system.CommandRunner.runCommand(CommandRunner.java:21)
 	... 8 more
 
-May 13, 2025 6:49:24 AM reposense.report.ReportGenerator analyzeRepos
+May 13, 2025 6:55:33 AM reposense.report.ReportGenerator analyzeRepos
 INFO: [3/4] Analyzing https://github.com/Jairik/Chick-Counting.git (pi)...
-May 13, 2025 6:49:24 AM reposense.git.GitClone cloneFromBareAndUpdateBranch
+May 13, 2025 6:55:33 AM reposense.git.GitClone cloneFromBareAndUpdateBranch
 SEVERE: Exception met while cloning or checking out Jairik/Chick-Counting[pi].Analysis terminated.
 java.lang.RuntimeException: reposense.system.CommandRunnerProcessException: Error returned from command git clone 'repos/Jairik_Chick-Counting/Chick-Counting_bare' --branch pi 'repos/Jairik_Chick-Counting/Chick-Counting' on path . :
 Cloning into 'repos/Jairik_Chick-Counting/Chick-Counting'...
@@ -154,7 +154,7 @@ done.
 Downloading data/test-no-encode/Thermal---20250426-012747-781.mp4 (274 KB)
 Error downloading object: data/test-no-encode/Thermal---20250426-012747-781.mp4 (64b3a8d): Smudge error: Error downloading data/test-no-encode/Thermal---20250426-012747-781.mp4 (64b3a8d885c2a6c398a7f7eb25b922d2467f01aeefb32229f1482a848c3e8a32): error transferring "64b3a8d885c2a6c398a7f7eb25b922d2467f01aeefb32229f1482a848c3e8a32": [0] remote missing object 64b3a8d885c2a6c398a7f7eb25b922d2467f01aeefb32229f1482a848c3e8a32
 
-Errors logged to '/home/runner/work/ChickCounting-RepoSense/ChickCounting-RepoSense/repos/Jairik_Chick-Counting/Chick-Counting/.git/lfs/logs/20250513T064924.604693294.log'.
+Errors logged to '/home/runner/work/ChickCounting-RepoSense/ChickCounting-RepoSense/repos/Jairik_Chick-Counting/Chick-Counting/.git/lfs/logs/20250513T065533.710387781.log'.
 Use `git lfs logs last` to view the log.
 error: external filter 'git-lfs filter-process' failed
 fatal: data/test-no-encode/Thermal---20250426-012747-781.mp4: smudge filter lfs failed
@@ -178,7 +178,7 @@ done.
 Downloading data/test-no-encode/Thermal---20250426-012747-781.mp4 (274 KB)
 Error downloading object: data/test-no-encode/Thermal---20250426-012747-781.mp4 (64b3a8d): Smudge error: Error downloading data/test-no-encode/Thermal---20250426-012747-781.mp4 (64b3a8d885c2a6c398a7f7eb25b922d2467f01aeefb32229f1482a848c3e8a32): error transferring "64b3a8d885c2a6c398a7f7eb25b922d2467f01aeefb32229f1482a848c3e8a32": [0] remote missing object 64b3a8d885c2a6c398a7f7eb25b922d2467f01aeefb32229f1482a848c3e8a32
 
-Errors logged to '/home/runner/work/ChickCounting-RepoSense/ChickCounting-RepoSense/repos/Jairik_Chick-Counting/Chick-Counting/.git/lfs/logs/20250513T064924.604693294.log'.
+Errors logged to '/home/runner/work/ChickCounting-RepoSense/ChickCounting-RepoSense/repos/Jairik_Chick-Counting/Chick-Counting/.git/lfs/logs/20250513T065533.710387781.log'.
 Use `git lfs logs last` to view the log.
 error: external filter 'git-lfs filter-process' failed
 fatal: data/test-no-encode/Thermal---20250426-012747-781.mp4: smudge filter lfs failed
@@ -191,9 +191,9 @@ and retry with 'git restore --source=HEAD :/'
 	at reposense.system.CommandRunner.runCommand(CommandRunner.java:21)
 	... 8 more
 
-May 13, 2025 6:49:24 AM reposense.report.ReportGenerator analyzeRepos
+May 13, 2025 6:55:33 AM reposense.report.ReportGenerator analyzeRepos
 INFO: [4/4] Analyzing https://github.com/Jairik/Chick-Counting.git (pi-dev)...
-May 13, 2025 6:49:24 AM reposense.git.GitClone cloneFromBareAndUpdateBranch
+May 13, 2025 6:55:33 AM reposense.git.GitClone cloneFromBareAndUpdateBranch
 SEVERE: Exception met while cloning or checking out Jairik/Chick-Counting[pi-dev].Analysis terminated.
 java.lang.RuntimeException: reposense.system.CommandRunnerProcessException: Error returned from command git clone 'repos/Jairik_Chick-Counting/Chick-Counting_bare' --branch pi-dev 'repos/Jairik_Chick-Counting/Chick-Counting' on path . :
 Cloning into 'repos/Jairik_Chick-Counting/Chick-Counting'...
@@ -201,7 +201,7 @@ done.
 Downloading data/picture-tests/capture_2025-03-05_13-33-32.jpg (344 KB)
 Error downloading object: data/picture-tests/capture_2025-03-05_13-33-32.jpg (bbdb4af): Smudge error: Error downloading data/picture-tests/capture_2025-03-05_13-33-32.jpg (bbdb4af7a696905f6903a0cfd777eb844243b8f6d960783d3d315580fe176c79): error transferring "bbdb4af7a696905f6903a0cfd777eb844243b8f6d960783d3d315580fe176c79": [0] remote missing object bbdb4af7a696905f6903a0cfd777eb844243b8f6d960783d3d315580fe176c79
 
-Errors logged to '/home/runner/work/ChickCounting-RepoSense/ChickCounting-RepoSense/repos/Jairik_Chick-Counting/Chick-Counting/.git/lfs/logs/20250513T064924.882940823.log'.
+Errors logged to '/home/runner/work/ChickCounting-RepoSense/ChickCounting-RepoSense/repos/Jairik_Chick-Counting/Chick-Counting/.git/lfs/logs/20250513T065533.988458248.log'.
 Use `git lfs logs last` to view the log.
 error: external filter 'git-lfs filter-process' failed
 fatal: data/picture-tests/capture_2025-03-05_13-33-32.jpg: smudge filter lfs failed
@@ -225,7 +225,7 @@ done.
 Downloading data/picture-tests/capture_2025-03-05_13-33-32.jpg (344 KB)
 Error downloading object: data/picture-tests/capture_2025-03-05_13-33-32.jpg (bbdb4af): Smudge error: Error downloading data/picture-tests/capture_2025-03-05_13-33-32.jpg (bbdb4af7a696905f6903a0cfd777eb844243b8f6d960783d3d315580fe176c79): error transferring "bbdb4af7a696905f6903a0cfd777eb844243b8f6d960783d3d315580fe176c79": [0] remote missing object bbdb4af7a696905f6903a0cfd777eb844243b8f6d960783d3d315580fe176c79
 
-Errors logged to '/home/runner/work/ChickCounting-RepoSense/ChickCounting-RepoSense/repos/Jairik_Chick-Counting/Chick-Counting/.git/lfs/logs/20250513T064924.882940823.log'.
+Errors logged to '/home/runner/work/ChickCounting-RepoSense/ChickCounting-RepoSense/repos/Jairik_Chick-Counting/Chick-Counting/.git/lfs/logs/20250513T065533.988458248.log'.
 Use `git lfs logs last` to view the log.
 error: external filter 'git-lfs filter-process' failed
 fatal: data/picture-tests/capture_2025-03-05_13-33-32.jpg: smudge filter lfs failed
@@ -238,7 +238,7 @@ and retry with 'git restore --source=HEAD :/'
 	at reposense.system.CommandRunner.runCommand(CommandRunner.java:21)
 	... 8 more
 
-May 13, 2025 6:49:25 AM reposense.report.ReportGenerator generateReposReport
+May 13, 2025 6:55:34 AM reposense.report.ReportGenerator generateReposReport
 INFO: The report is generated at /home/runner/work/ChickCounting-RepoSense/ChickCounting-RepoSense/reposense-report
-May 13, 2025 6:49:25 AM reposense.RepoSense main
-INFO: Elapsed processing time: 17.69 second(s)
+May 13, 2025 6:55:34 AM reposense.RepoSense main
+INFO: Elapsed processing time: 17.63 second(s)
